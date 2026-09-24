@@ -3,248 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Опрацювання теми: Операційна система GNU/Linux та Git</title>
-    <style>
-        :root {
-            --bg-color: #f4f6f9;
-            --text-color: #2c3e50;
-            --card-bg: #ffffff;
-            --accent-color: #2980b9;
-            --code-bg: #1e1e1e;
-            --code-color: #d4d4d4;
-            --border-color: #e0e0e0;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px 0;
-            border-bottom: 2px solid var(--accent-color);
-            margin-bottom: 30px;
-        }
-
-        h1, h2, h3 {
-            color: var(--accent-color);
-        }
-
-        section {
-            background: var(--card-bg);
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 1px solid var(--border-color);
-        }
-
-        ul, ol {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-
-        th, td {
-            text-align: left;
-            padding: 12px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        th {
-            background-color: var(--bg-color);
-        }
-
-        pre {
-            background-color: var(--code-bg);
-            color: var(--code-color);
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        code {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #eef2f5;
-            padding: 2px 5px;
-            border-radius: 3px;
-            color: #c7254e;
-        }
-
-        pre code {
-            background-color: transparent;
-            color: inherit;
-            padding: 0;
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            color: #7f8c8d;
-            font-size: 0.9em;
-        }
-    </style>
+    <title>Опрацювання теми: GNU/Linux & Git</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="container">
     <header>
-        <h1>Основи GNU/Linux та Git</h1>
-        <p>Навчальна сторінка з опрацювання теми</p>
+        <div class="container">
+            <h1>Основи GNU/Linux та Git</h1>
+            <p class="subtitle">Практичний посібник з командного рядка, BASH та системи контролю версій</p>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>1. Коротка інформація про ОС GNU/Linux</h2>
-        <p><strong>GNU/Linux</strong> — це сімейство вільних та відкритих операційних систем, побудованих на основі ядра Linux та набору базових утиліт від проєкту GNU. Завдяки високій стабільності, безпеці та гнучкості налаштувань, GNU/Linux широко використовується на серверах, суперкомп'ютерах, хмарних платформах, вбудованих пристроях (включаючи Android), а також на робочих станціях розробників.</p>
-    </section>
+    <main class="container">
+        
+        <!-- Секція 1: Про Linux -->
+        <section id="about" class="card">
+            <h2>1. Коротка інформація про ОС GNU/Linux</h2>
+            <p><strong>GNU/Linux</strong> — це вільна, відкрита та кросплатформна операційна система, побудована на основі ядра Linux та системних утиліт проєкту GNU. Вона є стандартом для серверів, хмарних обчислень, суперкомп'ютерів та інструментом №1 для розробників.</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Безпека</h3>
+                    <p>Суворе розмежування прав доступу та відкритий сирцевий код роблять систему стійкою до загроз.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Продуктивність</h3>
+                    <p>Ефективне використання ресурсів дозволяє працювати як на слабких пристроях, так і на потужних серверах.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Гнучкість</h3>
+                    <p>Можливість повністю налаштувати кожен аспект системи: від ядра до графічної оболонки.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="distros">
-        <h2>2. Популярні дистрибутиви Linux</h2>
-        <ul>
-            <li><strong>Ubuntu</strong> — один із найпопулярніших дистрибутивів для початківців та серверів на базі Debian.</li>
-            <li><strong>Debian</strong> — відомий своєю стабільністю та суворим дотриманням принципів вільного ПЗ.</li>
-            <li><strong>Fedora</strong> — дистрибутив, що швидко впроваджує нові технології, підтримується Red Hat.</li>
-            <li><strong>Arch Linux</strong> — мінімалістичний дистрибутив за принципом «KISS» (Keep It Simple, Stupid) із системою оновлень Rolling Release.</li>
-            <li><strong>Linux Mint</strong> — зручний дистрибутив для щоденного використання на базі Ubuntu зі звичним інтерфейсом.</li>
-            <li><strong>CentOS / AlmaLinux / Rocky Linux</strong> — стабільні корпоративні дистрибутиви, сумісні з RHEL.</li>
-        </ul>
-    </section>
+        <!-- Секція 2: Дистрибутиви -->
+        <section id="distros" class="card">
+            <h2>2. Популярні дистрибутиви Linux</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Дистрибутив</th>
+                            <th>База</th>
+                            <th>Цільова аудиторія</th>
+                            <th>Особливості</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ubuntu</strong></td>
+                            <td>Debian</td>
+                            <td>Початківці, розробники</td>
+                            <td>Зручний інтерфейс, велика спільнота</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Debian</strong></td>
+                            <td>Незалежний</td>
+                            <td>Сервери, системні адміністратори</td>
+                            <td>Еталонна стабільність та надійність</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fedora</strong></td>
+                            <td>Red Hat</td>
+                            <td>Розробники, інженери</td>
+                            <td>Швидке впровадження нових технологій</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Arch Linux</strong></td>
+                            <td>Незалежний</td>
+                            <td>Досвідчені користувачі</td>
+                            <td>Принцип KISS, оновлення Rolling Release</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Linux Mint</strong></td>
+                            <td>Ubuntu / Debian</td>
+                            <td>Користувачі ПК, перехід з Windows</td>
+                            <td>Класичний робочий стіл, готовий до використання</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-    <section id="cli">
-        <h2>3. Приклади команд роботи в Linux CLI</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Команда</th>
-                    <th>Опис</th>
-                    <th>Приклад використання</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>pwd</code></td>
-                    <td>Виводить поточний робочий каталог</td>
-                    <td><code>pwd</code></td>
-                </tr>
-                <tr>
-                    <td><code>echo</code></td>
-                    <td>Виводить текст у консоль або файл</td>
-                    <td><code>echo "Hello World"</code></td>
-                </tr>
-                <tr>
-                    <td><code>ls</code></td>
-                    <td>Відображає вміст каталогу</td>
-                    <td><code>ls -la</code></td>
-                </tr>
-                <tr>
-                    <td><code>cd</code></td>
-                    <td>Змінює поточний каталог</td>
-                    <td><code>cd /var/log</code></td>
-                </tr>
-                <tr>
-                    <td><code>touch</code></td>
-                    <td>Створює порожній файл або оновлює час</td>
-                    <td><code>touch file.txt</code></td>
-                </tr>
-                <tr>
-                    <td><code>mkdir</code></td>
-                    <td>Створює новий каталог</td>
-                    <td><code>mkdir my_folder</code></td>
-                </tr>
-                <tr>
-                    <td><code>cp</code></td>
-                    <td>Копіює файли або каталоги</td>
-                    <td><code>cp file.txt /backup/</code></td>
-                </tr>
-                <tr>
-                    <td><code>mv</code></td>
-                    <td>Переміщує або перейменовує файли</td>
-                    <td><code>mv old.txt new.txt</code></td>
-                </tr>
-                <tr>
-                    <td><code>rm</code></td>
-                    <td>Видаляє файли або каталоги</td>
-                    <td><code>rm -rf my_folder</code></td>
-                </tr>
-                <tr>
-                    <td><code>history</code></td>
-                    <td>Показує історію виконаних команд</td>
-                    <td><code>history</code></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+        <!-- Секція 3: Команди CLI -->
+        <section id="cli" class="card">
+            <h2>3. Приклади команд роботи в Linux CLI</h2>
+            <div class="command-grid">
+                <div class="cmd-card">
+                    <code>pwd</code>
+                    <p>Виводить повний шлях до поточного робочого каталогу.</p>
+                </div>
+                <div class="cmd-card">
+                    <code>echo</code>
+                    <p>Виводить рядок тексту у консоль або перенаправляє його у файл.</p>
+                </div>
+                <div class="cmd-card">
+                    <code>ls</code>
+                    <p>Відображає вміст каталогу (наприклад, <code>ls -la</code>).</p>
+                </div>
+                <div class="cmd-card">
+                    <code>cd</code>
+                    <p>Змінює поточний каталог (наприклад, <code>cd /var/log</code>).</p>
+                </div>
+                <div class="cmd-card">
+                    <code>touch</code>
+                    <p>Створює новий порожній файл або оновлює часову мітку.</p>
+                </div>
+                <div class="cmd-card">
+                    <code>mkdir</code>
+                    <p>Створює новий каталог (наприклад, <code>mkdir new_folder</code>).</p>
+                </div>
+                <div class="cmd-card">
+                    <code>cp</code>
+                    <p>Копіює файли або каталоги (наприклад, <code>cp -r dir1 dir2</code>).</p>
+                </div>
+                <div class="cmd-card">
+                    <code>mv</code>
+                    <p>Переміщує або перейменовує файли та папки.</p>
+                </div>
+                <div class="cmd-card">
+                    <code>rm</code>
+                    <p>Видаляє файли або каталоги (наприклад, <code>rm -rf folder</code>).</p>
+                </div>
+                <div class="cmd-card">
+                    <code>history</code>
+                    <p>Показує список раніше виконаних команд у терміналі.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="script">
-        <h2>4. BASH-скрипт: Імітація авторизації в системі</h2>
-        <p>Нижче наведено скрипт, який запрошує логін та пароль у текстовому режимі:</p>
-<pre><code>#!/bin/bash
+        <!-- Секція 4: BASH Скрипт -->
+        <section id="bash-simulation" class="card">
+            <h2>4. BASH-скрипт: Авторизація в системі</h2>
+            <p>Вихідний код BASH-скрипту для перевірки облікових даних у текстовому режимі:</p>
+            
+            <pre><code>#!/bin/bash
 
-# Налаштування правильних облікових даних
+# Налаштування правильних даних
 CORRECT_USER="admin"
 CORRECT_PASS="secret123"
 
 echo "=== Система авторизації GNU/Linux ==="
 
-# Запит логіна
 read -p "Логін: " username
-
-# Запит пароля (приховане введення)
 read -sp "Пароль: " password
 echo ""
 
-# Перевірка авторизації
 if [ "$username" == "$CORRECT_USER" ] && [ "$password" == "$CORRECT_PASS" ]; then
     echo "Успішна авторизація! Ласкаво просимо, $username."
 else
     echo "Помилка: Невірний логін або пароль."
     exit 1
-fi
-</code></pre>
-    </section>
+fi</code></pre>
 
-    <section id="sources">
-        <h2>5. Джерела інформації</h2>
-        <ul>
-            <li><a href="https://www.kernel.org" target="_blank">Офіційний сайт ядра Linux (kernel.org)</a></li>
-            <li><a href="https://www.gnu.org" target="_blank">Проєкт GNU (gnu.org)</a></li>
-            <li><a href="https://ubuntu.com/tutorials" target="_blank">Навчальні матеріали Ubuntu Tutorials</a></li>
-            <li><a href="https://git-scm.com/doc" target="_blank">Офіційна документація Git</a></li>
-        </ul>
-    </section>
+            <h3>Інтерактивний онлайн-емулятор</h3>
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="btn red"></span>
+                    <span class="btn yellow"></span>
+                    <span class="btn green"></span>
+                    <span class="terminal-title">bash -- 80x24</span>
+                </div>
+                <div class="terminal-body">
+                    <p>=== Система авторизації GNU/Linux ===</p>
+                    <p class="hint">Тестові дані ➔ Логін: <b>admin</b> | Пароль: <b>secret123</b></p>
+                    <hr>
+                    <div id="interactive-area">
+                        <label for="input-username">Логін:</label><br>
+                        <input type="text" id="input-username" autocomplete="off"><br>
+                        <label for="input-password">Пароль:</label><br>
+                        <input type="password" id="input-password"><br>
+                        <button onclick="runAuthScript()">Увійти</button>
+                    </div>
+                    <p id="auth-result"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секція 5: Джерела -->
+        <section id="sources" class="card">
+            <h2>5. Джерела інформації</h2>
+            <ul class="styled-list">
+                <li><a href="https://www.kernel.org" target="_blank" rel="noopener">Офіційний сайт ядра Linux (kernel.org)</a></li>
+                <li><a href="https://www.gnu.org" target="_blank" rel="noopener">Проєкт GNU та його філософія (gnu.org)</a></li>
+                <li><a href="https://ubuntu.com/tutorials" target="_blank" rel="noopener">Навчальні матеріали Ubuntu Tutorials</a></li>
+                <li><a href="https://git-scm.com/doc" target="_blank" rel="noopener">Офіційна документація Git</a></li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        <p>Практичне завдання з опрацювання Linux & Git © 2026</p>
+        <div class="container">
+            <p>Практичний проєкт з опрацювання теми GNU/Linux & Git © 2026</p>
+        </div>
     </footer>
-</div>
 
+    <script src="script.js"></script>
 </body>
 </html>
