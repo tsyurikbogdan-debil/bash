@@ -1,0 +1,230 @@
+:root {
+    --bg-primary: #0f172a;
+    --card-bg: #1e293b;
+    --accent-blue: #38bdf8;
+    --accent-green: #4ade80;
+    --accent-red: #f87171;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+    --code-bg: #090d16;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #1e1b4b, #0f172a);
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--accent-blue);
+    font-size: 2.3rem;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-top: 10px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: var(--accent-blue);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h3 {
+    color: var(--accent-green);
+}
+
+/* Огляд якостей */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.feature-item h3 {
+    margin-top: 0;
+}
+
+/* Таблиця */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--accent-blue);
+}
+
+/* Сітка команд */
+.command-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+}
+
+.cmd-card {
+    background-color: var(--code-bg);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-blue);
+}
+
+.cmd-card code {
+    font-size: 1.2rem;
+    color: var(--accent-green);
+}
+
+pre {
+    background-color: var(--code-bg);
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    color: #d4d4d4;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Термінал */
+.terminal-box {
+    background-color: var(--code-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.terminal-header {
+    background-color: #1e293b;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+.red { background-color: #ef4444; }
+.yellow { background-color: #f59e0b; }
+.green { background-color: #10b981; }
+
+.terminal-title {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-left: 10px;
+}
+
+.terminal-body {
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.terminal-body .hint {
+    color: var(--text-secondary);
+}
+
+.terminal-body input {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+    color: var(--accent-green);
+    padding: 6px 10px;
+    margin: 5px 0 12px 0;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.terminal-body button {
+    background-color: var(--accent-blue);
+    color: #0f172a;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.terminal-body button:hover {
+    opacity: 0.9;
+}
+
+#auth-result {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Список джерел */
+.styled-list li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}
